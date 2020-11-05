@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DummyBlocks returns block information as expected in English 1`] = `
+Object {
+  "blockIconURI": "",
+  "blocks": Array [
+    Object {
+      "arguments": Object {
+        "MESSAGE": Object {
+          "defaultValue": "Hello, World!",
+          "type": "string",
+        },
+      },
+      "blockType": "reporter",
+      "opcode": "say",
+      "text": "say [MESSAGE]",
+    },
+    "---",
+    Object {
+      "arguments": Object {
+        "TARGET": Object {
+          "menu": "Target",
+          "type": "string",
+        },
+      },
+      "blockType": "command",
+      "opcode": "showSprite",
+      "text": "show [TARGET] in log",
+    },
+  ],
+  "color1": "#a0a0a0",
+  "color2": "#808080",
+  "color3": "#606060",
+  "id": "dummy",
+  "menuIconURI": "",
+  "menus": Object {
+    "Target": Object {
+      "acceptReporters": true,
+      "items": Array [
+        Object {
+          "text": "all sprites",
+          "value": "allSprites",
+        },
+        Object {
+          "text": "this sprite",
+          "value": "thisSprite",
+        },
+      ],
+    },
+  },
+  "name": "Dummy",
+}
+`;
+
+exports[`DummyBlocks returns block information as expected in Japanese 1`] = `
+Object {
+  "blockIconURI": "",
+  "blocks": Array [
+    Object {
+      "arguments": Object {
+        "MESSAGE": Object {
+          "defaultValue": "Hello, World!",
+          "type": "string",
+        },
+      },
+      "blockType": "reporter",
+      "opcode": "say",
+      "text": "[MESSAGE]と言う",
+    },
+    "---",
+    Object {
+      "arguments": Object {
+        "TARGET": Object {
+          "menu": "Target",
+          "type": "string",
+        },
+      },
+      "blockType": "command",
+      "opcode": "showSprite",
+      "text": "ログに[TARGET]を表示する",
+    },
+  ],
+  "color1": "#a0a0a0",
+  "color2": "#808080",
+  "color3": "#606060",
+  "id": "dummy",
+  "menuIconURI": "",
+  "menus": Object {
+    "Target": Object {
+      "acceptReporters": true,
+      "items": Array [
+        Object {
+          "text": "すべてのスプライト",
+          "value": "allSprites",
+        },
+        Object {
+          "text": "このスプライト",
+          "value": "thisSprite",
+        },
+      ],
+    },
+  },
+  "name": "Dummy",
+}
+`;

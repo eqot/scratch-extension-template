@@ -1,0 +1,7 @@
+{
+  "say": "say [MESSAGE]",
+
+  "showSprite": "show [TARGET] in log",
+  "all sprites": "all sprites",
+  "this sprite": "this sprite"
+}

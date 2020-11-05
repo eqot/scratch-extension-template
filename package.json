@@ -1,0 +1,36 @@
+{
+  "name": "scratch-extension-template",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "webpack",
+    "lint": "eslint 'src/**/*.ts' 'tests/**/*.ts'",
+    "test": "jest tests",
+    "test:coverage": "yarn test --coverage",
+    "test:update": "jest --updateSnapshot"
+  },
+  "dependencies": {
+    "format-message": "^6.2.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.15",
+    "@typescript-eslint/eslint-plugin": "^4.6.1",
+    "@typescript-eslint/parser": "^4.6.1",
+    "eslint": "^7.12.1",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-jest": "^24.1.0",
+    "jest": "^26.6.3",
+    "npm-run-all": "^4.1.5",
+    "scratch-vm": "^0.2.0-prerelease.20201016122132",
+    "ts-jest": "^26.4.3",
+    "ts-loader": "^8.0.8",
+    "typescript": "^4.0.5",
+    "url-loader": "^4.1.1",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
