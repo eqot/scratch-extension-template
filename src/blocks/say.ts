@@ -2,8 +2,8 @@ import BlockType from 'scratch-vm/src/extension-support/block-type';
 import ArgumentType from 'scratch-vm/src/extension-support/argument-type';
 import Cast from 'scratch-vm/src/util/cast';
 
-import { BlockInfo } from './index';
-import { translations } from '../translations';
+import { BlockInfo } from '../types';
+import { translations } from '../utils/translations';
 
 const SayBlock = {
   info(): BlockInfo {

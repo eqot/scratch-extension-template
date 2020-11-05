@@ -1,7 +1,7 @@
 import Runtime from 'scratch-vm/src/engine/runtime.js';
 
 import DummyExtensions from '../src/index';
-import { translations } from '../src/translations';
+import { translations } from '../src/utils/translations';
 
 describe('DummyBlocks', () => {
   let extension: DummyExtensions;

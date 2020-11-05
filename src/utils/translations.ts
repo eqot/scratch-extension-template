@@ -7,7 +7,8 @@ class Translations {
     formatMessage.setup({
       locale: defaultLocale || window.navigator.language || 'en',
       translations: SUPPORTED_LOCALES.reduce(
-        (acc, locale) => Object.assign(acc, { [locale]: require(`./${locale}.json`) }),
+        (acc, locale) =>
+          Object.assign(acc, { [locale]: require(`../translations/${locale}.json`) }),
         {}
       ),
     });
