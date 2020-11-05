@@ -1,8 +1,8 @@
 import BlockType from 'scratch-vm/src/extension-support/block-type';
 import ArgumentType from 'scratch-vm/src/extension-support/argument-type';
 
-import { BlockInfo } from './index';
-import { translations } from '../translations';
+import { BlockInfo } from '../types';
+import { translations } from '../utils/translations';
 
 const ShowSpriteBlock = {
   info(): BlockInfo {

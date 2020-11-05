@@ -1,9 +1,8 @@
-import { translations } from './translations';
-import { Blocks } from './blocks';
+import { BLOCKS_ORDER } from './blocks/order';
+import { generateBlocks } from './utils/blocks';
+import { translations } from './utils/translations';
 
 class DummyExtension {
-  private static BLOCKS_ORDER = ['say', '---', 'showSprite'];
-
   private runtime: unknown;
   private blocks;
 
@@ -12,8 +11,7 @@ class DummyExtension {
 
     translations.initialize(this.runtime, locale);
 
-    this.blocks = Blocks(DummyExtension.BLOCKS_ORDER);
-    this.blocks.inject(this);
+    this.blocks = generateBlocks(BLOCKS_ORDER, this);
   }
 
   getInfo(): unknown {

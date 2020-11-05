@@ -1,30 +1,14 @@
-export type BlockInfo = {
-  opcode: string;
-  blockType: string;
-  branchCount?: number;
-  terminal?: boolean;
-  blockAllThreads?: boolean;
-  text: string;
-  arguments?: unknown;
-  func?: string;
-  filter?: string[];
-};
-
-type Block = {
-  info: () => void;
-  menus: () => void;
-  functions: any;
-};
+import { Block } from '../types';
 
 const Separator = '---';
 
-const Blocks = (blocksOrder: string[]): any => {
+export const generateBlocks = (blocksOrder: string[], object: any): any => {
   const blocks = blocksOrder.map((block: any) => {
     if (isSeparator(block)) {
       return block;
     }
 
-    const { info, menus, ...functions } = require(`./${block}.ts`).default;
+    const { info, menus, ...functions } = require(`../blocks/${block}.ts`).default;
     return { info, menus, functions };
   }) as Block[];
 
@@ -33,21 +17,17 @@ const Blocks = (blocksOrder: string[]): any => {
     blocks.reduce((acc, { menus }) => (menus ? Object.assign(acc, menus()) : acc), {});
   const functions: any = blocks.reduce((acc, { functions }) => Object.assign(acc, functions), {});
 
+  for (const functionName in functions) {
+    object[functionName] = functions[functionName].bind(object);
+  }
+
   return {
     info,
     menus,
     functions,
-
-    inject(object: any): void {
-      for (const functionName in functions) {
-        object[functionName] = functions[functionName].bind(object);
-      }
-    },
   };
 };
 
 function isSeparator(block: unknown): boolean {
   return block === Separator;
 }
-
-export { Blocks };
