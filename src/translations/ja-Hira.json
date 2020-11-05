@@ -1,0 +1,7 @@
+{
+  "say": "[MESSAGE]という",
+
+  "showSprite": "ログに[TARGET]をひょうじする",
+  "all sprites": "すべてのスプライト",
+  "this sprite": "このスプライト"
+}
