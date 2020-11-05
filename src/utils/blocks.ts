@@ -2,7 +2,7 @@ import { Block } from '../types';
 
 const Separator = '---';
 
-export const generateBlocks = (blocksOrder: string[], object: any): any => {
+export const generateBlocks = (blocksOrder: string[], extension: any): any => {
   const blocks = blocksOrder.map((block: any) => {
     if (isSeparator(block)) {
       return block;
@@ -18,7 +18,7 @@ export const generateBlocks = (blocksOrder: string[], object: any): any => {
   const functions: any = blocks.reduce((acc, { functions }) => Object.assign(acc, functions), {});
 
   for (const functionName in functions) {
-    object[functionName] = functions[functionName].bind(object);
+    extension[functionName] = functions[functionName].bind(extension);
   }
 
   return {
