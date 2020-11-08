@@ -1,4 +1,8 @@
 {
+  "extension.name": "Dummy",
+  "extension.collaborator": "Dummy team",
+  "extension.description": "This is just a dummy extension",
+
   "say": "say [MESSAGE]",
 
   "showSprite": "show [TARGET] in log",

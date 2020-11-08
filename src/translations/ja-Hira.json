@@ -1,4 +1,8 @@
 {
+  "extension.name": "ダミー",
+  "extension.collaborator": "ダミーチーム",
+  "extension.description": "これはダミーのかくちょうきのうです。",
+
   "say": "[MESSAGE]という",
 
   "showSprite": "ログに[TARGET]をひょうじする",

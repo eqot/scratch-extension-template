@@ -3,7 +3,7 @@ import formatMessage from 'format-message';
 const SUPPORTED_LOCALES = ['en', 'ja', 'ja-Hira'];
 
 class Translations {
-  initialize(runtime: any, defaultLocale?: string): void {
+  initialize(defaultLocale?: string, runtime?: any): void {
     formatMessage.setup({
       locale: defaultLocale || window.navigator.language || 'en',
       translations: SUPPORTED_LOCALES.reduce(
@@ -13,7 +13,9 @@ class Translations {
       ),
     });
 
-    runtime.on('LOCALE_CHANGED', (locale: string) => this.setLocale(locale));
+    if (runtime) {
+      runtime.on('LOCALE_CHANGED', (locale: string) => this.setLocale(locale));
+    }
   }
 
   setLocale(locale: string): void {
