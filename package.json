@@ -6,6 +6,10 @@
   "types": "dist/index.d.ts",
   "license": "MIT",
   "private": true,
+  "engines": {
+    "node": ">=12",
+    "yarn": "^1.22.0"
+  },
   "scripts": {
     "start": "webpack-dev-server",
     "build": "run-p build:jsonp build:umd",
