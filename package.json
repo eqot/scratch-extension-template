@@ -1,14 +1,20 @@
 {
-  "name": "scratch-extension-template",
+  "name": "@eqot/scratch-extension-template",
   "version": "0.1.0",
   "main": "dist/index.js",
   "module": "dist/umd/index.js",
   "types": "dist/index.d.ts",
-  "license": "MIT",
-  "private": true,
   "engines": {
     "node": ">=12",
     "yarn": "^1.22.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/eqot/scratch-extension-template.git"
+  },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com/"
   },
   "scripts": {
     "start": "webpack-dev-server",
